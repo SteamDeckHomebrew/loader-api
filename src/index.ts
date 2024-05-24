@@ -66,4 +66,9 @@ export const executeInTab: (
 export const injectCssIntoTab: (tab: string, style: string) => string = api.injectCssIntoTab;
 export const removeCssFromTab: (tab: string, style: string) => void = api.removeCssFromTab;
 
-export declare const definePlugin: (fn: DefinePluginFn) => DefinePluginFn;
+export const definePlugin = (fn: DefinePluginFn): DefinePluginFn => {
+  return (...args) => {
+    // TODO: Maybe wrap this
+    return fn(...args);
+  };
+};
