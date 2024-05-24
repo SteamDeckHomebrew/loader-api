@@ -2,6 +2,7 @@
 // @ts-ignore
 import _manifest from '@decky/manifest';
 
+export * from "./types";
 import type { DefinePluginFn, FilePickerRes, FileSelectionType, RouterHook, Toaster } from './types';
 // Prevents it from being duplicated in output.
 const manifest = _manifest;
