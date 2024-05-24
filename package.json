@@ -1,6 +1,6 @@
 {
   "name": "@decky/api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Library for interacting with Decky Loader.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
