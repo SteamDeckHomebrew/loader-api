@@ -42,6 +42,10 @@ export const enum FileSelectionType {
   FOLDER,
 }
 
+export interface DeckyRequestInit extends RequestInit {
+  excludedHeaders: string[];
+}
+
 export interface Plugin {
   title: JSX.Element;
   icon: JSX.Element;

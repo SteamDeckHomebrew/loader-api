@@ -3,7 +3,7 @@
 import _manifest from '@decky/manifest';
 
 export * from "./types";
-import type { DefinePluginFn, FilePickerRes, FileSelectionType, RouterHook, Toaster } from './types';
+import type { DeckyRequestInit, DefinePluginFn, FilePickerRes, FileSelectionType, RouterHook, Toaster } from './types';
 // Prevents it from being duplicated in output.
 const manifest = _manifest;
 
@@ -66,6 +66,9 @@ export const executeInTab: (
 
 export const injectCssIntoTab: (tab: string, style: string) => string = api.injectCssIntoTab;
 export const removeCssFromTab: (tab: string, style: string) => void = api.removeCssFromTab;
+
+export const fetchNoCors: (input: string, init?: DeckyRequestInit | undefined) => Promise<Response> = api.fetchNoCors;
+export const getExternalResourceURL: (url: string) => string = api.getExternalResourceURL;
 
 export const definePlugin = (fn: DefinePluginFn): DefinePluginFn => {
   return (...args) => {
