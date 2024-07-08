@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/SteamDeckHomebrew/loader-api/compare/v1.0.4...v1.0.5) (2024-07-08)
+
+
+### Bug Fixes
+
+* **ci:** trigger release ([5418d82](https://github.com/SteamDeckHomebrew/loader-api/commit/5418d8246f0e3dc5a666f33fa44ee17dbc8a43fd))
+
 ## [1.0.4](https://github.com/SteamDeckHomebrew/loader-api/compare/v1.0.3...v1.0.4) (2024-07-08)
 
 
