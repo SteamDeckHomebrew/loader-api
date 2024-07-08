@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/SteamDeckHomebrew/loader-api/compare/v1.0.0...v1.0.1) (2024-07-08)
+
+
+### Bug Fixes
+
+* **types:** use the same Plugin type as decky-loader ([0ccebd7](https://github.com/SteamDeckHomebrew/loader-api/commit/0ccebd795aa9ef673d51638a4eec5ed650b43f50))
+
 # 1.0.0 (2024-06-27)
 
 
