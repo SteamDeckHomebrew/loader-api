@@ -47,11 +47,13 @@ export interface DeckyRequestInit extends RequestInit {
 }
 
 export interface Plugin {
-  title: JSX.Element;
+  name: string;
+  version?: string;
   icon: JSX.Element;
   content?: JSX.Element;
   onDismount?(): void;
   alwaysRender?: boolean;
+  titleView?: JSX.Element;
 }
 
 export type DefinePluginFn = () => Plugin;
