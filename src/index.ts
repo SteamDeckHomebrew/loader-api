@@ -7,7 +7,7 @@ import type { DeckyRequestInit, DefinePluginFn, FilePickerRes, FileSelectionType
 // Prevents it from being duplicated in output.
 const manifest = _manifest;
 
-const API_VERSION = 1;
+const API_VERSION = 2;
 
 if (!manifest?.name) {
   throw new Error('[@decky/api]: Failed to find plugin manifest.');
@@ -30,7 +30,20 @@ if (!internalAPIConnection) {
   );
 }
 
-const api = internalAPIConnection.connect(API_VERSION, manifest.name);
+// Version 1 throws on version mismatch so we have to account for that here.
+let api;
+try {
+  api = internalAPIConnection.connect(API_VERSION, manifest.name);
+} catch {
+  api = internalAPIConnection.connect(1, manifest.name);
+  console.warn(`[@decky/api] Requested API version ${API_VERSION} but the running loader only supports version 1. Some features may not work.`);
+}
+
+if (api._version != API_VERSION) {
+  console.warn(`[@decky/api] Requested API version ${API_VERSION} but the running loader only supports version ${api._version}. Some features may not work.`);
+}
+
+// TODO these could use a lot of JSDoc
 
 export const call: <Args extends any[] = [], Return = void>(route: string, ...args: Args) => Promise<Return> = api.call;
 export const callable: <Args extends any[] = [], Return = void>(route: string) => (...args: Args) => Promise<Return> =
@@ -69,6 +82,38 @@ export const removeCssFromTab: (tab: string, style: string) => void = api.remove
 
 export const fetchNoCors: (input: string, init?: DeckyRequestInit | undefined) => Promise<Response> = api.fetchNoCors;
 export const getExternalResourceURL: (url: string) => string = api.getExternalResourceURL;
+
+/**
+ * Returns state indicating the visibility of quick access menu.
+ * 
+ * @returns `true` if quick access menu is visible and `false` otherwise.
+ *
+ * @example
+ * import { FC, useEffect } from "react";
+ * import { useQuickAccessVisible } from "@decky/api";
+ *
+ * export const PluginPanelView: FC<{}> = ({ }) => {
+ *   const isVisible = useQuickAccessVisible();
+ *
+ *   useEffect(() => {
+ *     if (!isVisible) {
+ *       return;
+ *     }
+ *
+ *     const interval = setInterval(() => console.log("Hello world!"), 1000);
+ *     return () => {
+ *       clearInterval(interval);
+ *     }
+ *   }, [isVisible])
+ *
+ *   return (
+ *     <div>
+ *       {isVisible ? "VISIBLE" : "INVISIBLE"}
+ *     </div>
+ *   );
+ * };
+ */
+export const useQuickAccessVisible: () => boolean = api.useQuickAccessVisible;
 
 export const definePlugin = (fn: DefinePluginFn): DefinePluginFn => {
   return (...args) => {
