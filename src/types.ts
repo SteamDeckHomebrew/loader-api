@@ -15,9 +15,12 @@ export interface RouterHook {
 export interface ToastData {
   title: ReactNode;
   body: ReactNode;
-  onClick?: () => void;
+  header?: ReactNode;
+  fullTemplateTitle?: ReactNode;
+  timestamp?: Date;
   logo?: ReactNode;
   icon?: ReactNode;
+  onClick?: () => void;
   className?: string;
   contentClassName?: string;
   duration?: number;
