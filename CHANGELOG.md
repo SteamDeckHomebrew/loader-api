@@ -1,3 +1,11 @@
+# [1.1.0](https://github.com/SteamDeckHomebrew/loader-api/compare/v1.0.6...v1.1.0) (2024-07-26)
+
+
+### Features
+
+* **api:** add useQuickAccessVisible and bump api version to 2 ([2e52f3f](https://github.com/SteamDeckHomebrew/loader-api/commit/2e52f3fdf1e556d6cafa2c518d6cd32375aa0713))
+* **toasts:** add new toast options ([8de6b4d](https://github.com/SteamDeckHomebrew/loader-api/commit/8de6b4d4b3320f85183155e39e6f9171663fca34))
+
 ## [1.0.6](https://github.com/SteamDeckHomebrew/loader-api/compare/v1.0.5...v1.0.6) (2024-07-08)
 
 
