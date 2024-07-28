@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/SteamDeckHomebrew/loader-api/compare/v1.1.0...v1.1.1) (2024-07-28)
+
+
+### Bug Fixes
+
+* **toasts:** update for latest loader changes ([5df311d](https://github.com/SteamDeckHomebrew/loader-api/commit/5df311d2d87fd4ff3bbdb922531e474b6a63abc4))
+
 # [1.1.0](https://github.com/SteamDeckHomebrew/loader-api/compare/v1.0.6...v1.1.0) (2024-07-26)
 
 
