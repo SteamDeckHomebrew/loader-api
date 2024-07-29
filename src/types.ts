@@ -55,7 +55,7 @@ export const enum FileSelectionType {
 }
 
 export interface DeckyRequestInit extends RequestInit {
-  excludedHeaders: string[];
+  excludedHeaders?: string[];
 }
 
 export interface Plugin {
