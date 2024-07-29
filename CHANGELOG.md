@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/SteamDeckHomebrew/loader-api/compare/v1.1.1...v1.1.2) (2024-07-29)
+
+
+### Bug Fixes
+
+* **types:** DeckyRequestInit extended interface is optional ([7686625](https://github.com/SteamDeckHomebrew/loader-api/commit/7686625f317b98f86633bacfdb0d58b2d0d62a32))
+
 ## [1.1.1](https://github.com/SteamDeckHomebrew/loader-api/compare/v1.1.0...v1.1.1) (2024-07-28)
 
 
