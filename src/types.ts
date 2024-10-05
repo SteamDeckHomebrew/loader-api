@@ -3,13 +3,18 @@ import { RouteProps } from 'react-router';
 
 export type RoutePatch = (route: RouteProps) => RouteProps;
 
+export enum UIMode {
+  BigPicture = 4,
+  Desktop = 7,
+}
+
 export interface RouterHook {
   addRoute(path: string, component: ComponentType, props?: Omit<RouteProps, 'path' | 'children'>): void;
-  addPatch(path: string, patch: RoutePatch): RoutePatch;
-  addGlobalComponent(name: string, component: ComponentType): void;
+  addPatch(path: string, patch: RoutePatch, uiMode?: UIMode): RoutePatch;
+  addGlobalComponent(name: string, component: ComponentType, uiMode?: UIMode): void;
   removeRoute(path: string): void;
-  removePatch(path: string, patch: RoutePatch): void;
-  removeGlobalComponent(name: string): void;
+  removePatch(path: string, patch: RoutePatch, uiMode?: UIMode): void;
+  removeGlobalComponent(name: string, uiMode?: UIMode): void;
 }
 
 export interface ToastData {

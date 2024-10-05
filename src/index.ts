@@ -7,7 +7,7 @@ import type { DeckyRequestInit, DefinePluginFn, FilePickerRes, FileSelectionType
 // Prevents it from being duplicated in output.
 const manifest = _manifest;
 
-const API_VERSION = 2;
+const API_VERSION = 3;
 
 if (!manifest?.name) {
   throw new Error('[@decky/api]: Failed to find plugin manifest.');
