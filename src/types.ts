@@ -1,4 +1,4 @@
-import type { ComponentType, ReactNode } from 'react';
+import type { ComponentType, JSX, ReactNode } from 'react';
 import { RouteProps } from 'react-router';
 
 export type RoutePatch = (route: RouteProps) => RouteProps;

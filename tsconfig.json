@@ -3,8 +3,7 @@
     "outDir": "dist",
     "module": "ESNext",
     "target": "ES2020",
-    "jsx": "react",
-    "jsxFactory": "window.SP_REACT.createElement",
+    "jsx": "react-jsx",
     "declaration": true,
     "moduleResolution": "node",
     "noUnusedLocals": true,
@@ -14,6 +13,7 @@
     "noImplicitThis": true,
     "noImplicitAny": true,
     "strict": true,
+    "removeComments": true,
     "allowSyntheticDefaultImports": true
   },
   "include": ["src"],
