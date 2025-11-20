@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/SteamDeckHomebrew/loader-api/compare/v1.1.2...v1.1.3) (2025-11-20)
+
+
+### Bug Fixes
+
+* **api:** update for new react ([14e2116](https://github.com/SteamDeckHomebrew/loader-api/commit/14e2116c31c545b311edbdc6943f0d592123fe4b))
+
 ## [1.1.2](https://github.com/SteamDeckHomebrew/loader-api/compare/v1.1.1...v1.1.2) (2024-07-29)
 
 
