@@ -78,7 +78,7 @@ export const executeInTab: (
 ) => Promise<{ success: boolean; result: any }> = api.executeInTab;
 
 export const injectCssIntoTab: (tab: string, style: string) => string = api.injectCssIntoTab;
-export const removeCssFromTab: (tab: string, style: string) => void = api.removeCssFromTab;
+export const removeCssFromTab: (tab: string, cssId: string) => void = api.removeCssFromTab;
 
 export const fetchNoCors: (input: string, init?: DeckyRequestInit | undefined) => Promise<Response> = api.fetchNoCors;
 export const getExternalResourceURL: (url: string) => string = api.getExternalResourceURL;
